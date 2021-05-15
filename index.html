@@ -33,8 +33,9 @@ function upin(){
 var death = setInterval(function(){
 let Top = parseInt(window.getComputedStyle(up).getPropertyValue('bottom'))
 let left = parseInt(window.getComputedStyle(run).getPropertyValue('left'))
-if(Top<40 && left<30 && left>20){
-    alert('Sorry Bro :(\n'+''+' Game over');
+if(Top<20 && left<30 && left>20){
+    alert('Sorry Bro :(\n'+''+' Game over \n NOW REFRACE THE PAGE');
+    run.style.animation='none'
 }
 },10)
 
