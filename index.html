@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" onclick="upin()" id="poke">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>D-Game</title>
+</head>
+<body >
+    <h1 class="last">score :
+        <samp id="counter"> 0</samp></h1>
+  <div id="main"><img src="b.jpg" alt="" srcset="" width="100%" height="100%">
+      <div ><img src="d.png" alt="" srcset=""id="up">  </div>
+    <div ><img src="c.png" alt="" srcset="" id="run"></div>
+    
+    </div>  
+    
+    
+
+    <h1 class="h1">Start game press screen</h1>
+    <script>
+function upin(){
+    var up = document.getElementById('up');
+    var run = document.getElementById('run');
+    up.classList.add('ani')
+    setTimeout(function(){
+        up.classList.remove('ani')
+    },500)
+}
+
+var death = setInterval(function(){
+let Top = parseInt(window.getComputedStyle(up).getPropertyValue('bottom'))
+let left = parseInt(window.getComputedStyle(run).getPropertyValue('left'))
+if(Top<40 && left<30 && left>20){
+    alert('Sorry Bro :(\n'+''+' Game over');
+}
+},10)
+
+
+
+    
+    var poke = document.getElementById('poke');
+    var cmp = document.getElementById('counter');
+    poke.addEventListener('click', myfonction)
+
+
+
+
+    
+    function myfonction() {
+      cmp.innerHTML = parseInt(cmp.innerHTML) +13+1;
+
+
+    }
+    </script>
+</body>
+</html>
